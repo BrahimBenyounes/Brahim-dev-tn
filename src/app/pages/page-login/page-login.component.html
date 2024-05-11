@@ -1,0 +1,45 @@
+<style>
+  body {
+    background-image: url('assets/gestion.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensure the background covers the full viewport height */
+    margin: 0; /* Remove default body margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 400px; /* Adjust card width as needed */
+  }
+</style>
+
+<body>
+  555555
+  <div class="container my-container">
+    <div class="card justify-content-md-center">
+      
+      <div class="card-header text-center">
+        <h3>Se connecter</h3>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{errorMessage}}
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="E-mail" [(ngModel)]="authenticationRequest.login">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Mot de passe" [(ngModel)]="authenticationRequest.password">
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+          <a [routerLink]="['/inscrire']" class="btn btn-link">S'inscrire</a>
+          <button type="button" class="btn btn-primary" (click)="login()">
+            <i class="fas fa-check"></i>&nbsp;Se connecter
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
