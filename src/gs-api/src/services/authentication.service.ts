@@ -33,7 +33,7 @@ class AuthenticationService extends __BaseService {
     __body = body;
     let req = new HttpRequest<any>(
       'POST',
-      this.rootUrl + `/gestiondestock/v1/auth/authenticate`,
+        `http://192.168.1.160:8081/gestiondestock/v1/auth/authenticate`,
       __body,
       {
         headers: __headers,
