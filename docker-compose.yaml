@@ -1,4 +1,6 @@
+
 version: '3'
+
 services:
   angular-app:
     container_name: app-front
@@ -7,5 +9,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+    networks:
+      - app-network
 
 
+networks:
+  app-network:
+    name: gestion-de-stock-api_app-network
+    external: true
