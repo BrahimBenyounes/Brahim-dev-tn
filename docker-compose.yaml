@@ -1,4 +1,3 @@
-
 version: '3'
 
 services:
@@ -15,5 +14,5 @@ services:
 
 networks:
   app-network:
-    name: gestion-de-stock-api_app-network
+    name: back_app-network
     external: true
